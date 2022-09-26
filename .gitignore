@@ -4,3 +4,5 @@
 
 /Factory.API/obj
 /.vs
+/Factory.Interface/bin/
+/Factory.Interface/obj

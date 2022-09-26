@@ -5,6 +5,6 @@ namespace Factory.Interface
 {
     public interface IInvoke
     {
-        Task<string> Invoke(DTO id);
+        Task<string> Invoke(DTO dto);
     }
 }

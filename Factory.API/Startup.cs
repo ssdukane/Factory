@@ -1,18 +1,12 @@
 using Admin;
+using Dashboard;
 using Factory.Interface;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Users.API;
 
 namespace Factory.API
@@ -32,10 +26,13 @@ namespace Factory.API
             services.AddControllers();
 
             services.AddScoped<Factory>();
+
             services.AddScoped<UserManager>()
                 .AddScoped<IInvoke, UserManager>(s => s.GetService<UserManager>());
             services.AddScoped<AdminManager>()
                .AddScoped<IInvoke, AdminManager>(s => s.GetService<AdminManager>());
+            services.AddScoped<DashboardManager>()
+                .AddScoped<IInvoke, DashboardManager>(s => s.GetService<DashboardManager>());
 
             services.AddSwaggerGen(c =>
             {

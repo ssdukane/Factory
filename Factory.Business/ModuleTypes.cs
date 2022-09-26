@@ -8,5 +8,6 @@ namespace Factory.Business
     {
         User = 16,
         Admin = 53,
+        Dashboard=10,
     }
 }

@@ -1,16 +1,29 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Factory.API.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class FactoryController : Controller
     {
-        public IActionResult Index()
+        private readonly Factory _factory;
+
+        public FactoryController(Factory factory)
         {
-            return View();
+            this._factory = factory;
+        }
+        [HttpPost]
+        public async Task<string> Index(int value)
+        {
+            var result = string.Empty;
+            var module = _factory.GetModuleService(value);
+
+            if (module != null)
+            {
+                result = await module.Invoke(value);
+            }
+            return result.ToString();
         }
     }
 }

@@ -1,3 +1,4 @@
+using Factory.Interface;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -11,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Users.API;
 
 namespace Factory.API
 {
@@ -27,6 +29,10 @@ namespace Factory.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddScoped<Factory>();
+            services.AddScoped<UserManager>()
+                .AddScoped<IInvoke, UserManager>(s => s.GetService<UserManager>());
 
             services.AddSwaggerGen(c =>
             {

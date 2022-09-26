@@ -1,9 +1,10 @@
-﻿using System.Threading.Tasks;
+﻿using Factory.Business;
+using System.Threading.Tasks;
 
 namespace Factory.Interface
 {
     public interface IInvoke
     {
-        Task<string> Invoke(int id);
+        Task<string> Invoke(DTO id);
     }
 }

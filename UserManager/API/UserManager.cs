@@ -1,4 +1,5 @@
-﻿using Factory.Interface;
+﻿using Factory.Business;
+using Factory.Interface;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
@@ -10,13 +11,16 @@ namespace Users.API
 
         [HttpPost]
         [Route("Invoke")]
-        public async Task<string> Invoke(int id)
+        public async Task<string> Invoke(DTO dto)
         {
             string result = string.Empty;
-            switch (id)
+            switch (dto.RequestType)
             {
-                case 16:
-                    result = "Users";
+                case 12:
+                    result = "Regular User";
+                    break;
+                case 13:
+                    result = "Super User";
                     break;
             }
             return result;

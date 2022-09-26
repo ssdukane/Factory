@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Factory.Business;
+using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 namespace Factory.API.Controllers
@@ -14,14 +15,14 @@ namespace Factory.API.Controllers
             this._factory = factory;
         }
         [HttpPost]
-        public async Task<string> Index(int value)
+        public async Task<string> Index(DTO dto)
         {
             var result = string.Empty;
-            var module = _factory.GetModuleService(value);
+            var module = _factory.GetModuleService(dto.id);
 
             if (module != null)
             {
-                result = await module.Invoke(value);
+                result = await module.Invoke(dto);
             }
             return result.ToString();
         }

@@ -6,3 +6,6 @@
 /.vs
 /Factory.Interface/bin/
 /Factory.Interface/obj
+/Factory.Business/obj
+/Factory.Business/bin
+/Factory.API/bin

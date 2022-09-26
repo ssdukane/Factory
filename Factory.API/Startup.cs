@@ -1,3 +1,4 @@
+using Admin;
 using Factory.Interface;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -33,6 +34,8 @@ namespace Factory.API
             services.AddScoped<Factory>();
             services.AddScoped<UserManager>()
                 .AddScoped<IInvoke, UserManager>(s => s.GetService<UserManager>());
+            services.AddScoped<AdminManager>()
+               .AddScoped<IInvoke, AdminManager>(s => s.GetService<AdminManager>());
 
             services.AddSwaggerGen(c =>
             {

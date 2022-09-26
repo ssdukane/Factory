@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Admin\Admin.csproj" />
     <ProjectReference Include="..\Factory.Business\Factory.Business.csproj" />
     <ProjectReference Include="..\Factory.Interface\Factory.Interface.csproj" />
     <ProjectReference Include="..\UserManager\Users.csproj" />

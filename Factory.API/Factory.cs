@@ -1,4 +1,5 @@
-﻿using Factory.Business;
+﻿using Admin;
+using Factory.Business;
 using Factory.Interface;
 using System;
 using Users.API;
@@ -22,8 +23,8 @@ namespace Factory.API
                 case (int)ModuleTypes.User:
                      return (IInvoke)serviceProvider.GetService(typeof(UserManager));
 
-                //case (int)ModuleTypes.Admin:
-                    //return (IInvoke)serviceProvider.GetService(typeof(AdminManager));
+                case (int)ModuleTypes.Admin:
+                    return (IInvoke)serviceProvider.GetService(typeof(AdminManager));
 
 
 

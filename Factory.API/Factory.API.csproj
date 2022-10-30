@@ -14,6 +14,8 @@
     <ProjectReference Include="..\Admin\Admin.csproj" />
     <ProjectReference Include="..\Dashboard\Dashboard.csproj" />
     <ProjectReference Include="..\Factory.Business\Factory.Business.csproj" />
+    <ProjectReference Include="..\Factory.DataAccessLayer\Omi.Infra.csproj" />
+    <ProjectReference Include="..\Factory.Domain\Omi.Domain.csproj" />
     <ProjectReference Include="..\Factory.Interface\Factory.Interface.csproj" />
     <ProjectReference Include="..\UserManager\Users.csproj" />
   </ItemGroup>

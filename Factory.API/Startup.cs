@@ -7,15 +7,20 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Omi.Application.Configuration;
+using Omi.Infra;
 using Users.API;
 
 namespace Factory.API
 {
     public class Startup
     {
+        private readonly IConfiguration _configuration;
+        private readonly ApplicationOptions _options;
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            _configuration = configuration;
+            //_options = _configuration.Get<ApplicationOptions>();
         }
 
         public IConfiguration Configuration { get; }
@@ -34,6 +39,7 @@ namespace Factory.API
             services.AddScoped<DashboardManager>()
                 .AddScoped<IInvoke, DashboardManager>(s => s.GetService<DashboardManager>());
 
+            services.AddInfraServices(_configuration);
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Factory API", Version = "v1" });

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "RshoV3NlTk0xX6qF/8zgLwVJ1nQn/VRSWpstQc5yXg69YEXOwoNFLEvHrC0A7B2A3WjdF337ZWClvBSJaWai3g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\shailendra.d\\source\\repos\\ssdukane\\Factory\\Omi.Application\\Omi.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\shailendra.d\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

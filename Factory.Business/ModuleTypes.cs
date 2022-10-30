@@ -6,8 +6,9 @@ namespace Factory.Business
 {
     public enum ModuleTypes
     {
-        User = 16,
-        Admin = 53,
+        Customer = 23,
+        Admin = 33,
+        Owner = 43,
         Dashboard=10,
     }
 }

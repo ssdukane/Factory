@@ -17,9 +17,11 @@ namespace Factory.API
         {
             switch (value)
             {
-                case (int)ModuleTypes.User:
+                case (int)ModuleTypes.Customer:
                      return (IInvoke)serviceProvider.GetService(typeof(UserManager));
-                case (int)ModuleTypes.Admin:
+                case (int)ModuleTypes.Admin://33
+                    return (IInvoke)serviceProvider.GetService(typeof(AdminManager));
+                case (int)ModuleTypes.Owner:
                     return (IInvoke)serviceProvider.GetService(typeof(AdminManager));
                 case (int)ModuleTypes.Dashboard:
                     return (IInvoke)serviceProvider.GetService(typeof(DashboardManager));

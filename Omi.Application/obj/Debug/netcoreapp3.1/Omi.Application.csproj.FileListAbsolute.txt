@@ -1,0 +1,13 @@
+C:\Users\shailendra.d\source\repos\ssdukane\Factory\Omi.Application\bin\Debug\netcoreapp3.1\Omi.Application.deps.json
+C:\Users\shailendra.d\source\repos\ssdukane\Factory\Omi.Application\bin\Debug\netcoreapp3.1\Omi.Application.dll
+C:\Users\shailendra.d\source\repos\ssdukane\Factory\Omi.Application\bin\Debug\netcoreapp3.1\Omi.Application.pdb
+C:\Users\shailendra.d\source\repos\ssdukane\Factory\Omi.Application\obj\Debug\netcoreapp3.1\Omi.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shailendra.d\source\repos\ssdukane\Factory\Omi.Application\obj\Debug\netcoreapp3.1\Omi.Application.AssemblyInfoInputs.cache
+C:\Users\shailendra.d\source\repos\ssdukane\Factory\Omi.Application\obj\Debug\netcoreapp3.1\Omi.Application.AssemblyInfo.cs
+C:\Users\shailendra.d\source\repos\ssdukane\Factory\Omi.Application\obj\Debug\netcoreapp3.1\Omi.Application.csproj.CoreCompileInputs.cache
+C:\Users\shailendra.d\source\repos\ssdukane\Factory\Omi.Application\obj\Debug\netcoreapp3.1\Omi.Application.dll
+C:\Users\shailendra.d\source\repos\ssdukane\Factory\Omi.Application\obj\Debug\netcoreapp3.1\Omi.Application.pdb
+C:\Users\shailendra.d\source\repos\ssdukane\Factory\Omi.Application\bin\Debug\netcoreapp3.1\Omi.Domain.dll
+C:\Users\shailendra.d\source\repos\ssdukane\Factory\Omi.Application\bin\Debug\netcoreapp3.1\Omi.Domain.pdb
+C:\Users\shailendra.d\source\repos\ssdukane\Factory\Omi.Application\obj\Debug\netcoreapp3.1\Omi.Application.csproj.AssemblyReference.cache
+C:\Users\shailendra.d\source\repos\ssdukane\Factory\Omi.Application\obj\Debug\netcoreapp3.1\Omi.Application.csproj.CopyComplete

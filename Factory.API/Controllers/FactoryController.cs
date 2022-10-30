@@ -18,7 +18,7 @@ namespace Factory.API.Controllers
         public async Task<string> Index(DTO dto)
         {
             var result = string.Empty;
-            var module = _factory.GetModuleService(dto.id);
+            var module = _factory.GetModuleService(dto.Id);
 
             if (module != null)
             {

@@ -1,0 +1,30 @@
+﻿using Factory.Business;
+using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
+
+namespace Factory.v2.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class FactoryController : ControllerBase
+    {
+        private readonly Factory _factory;
+
+        public FactoryController(Factory factory)
+        {
+            this._factory = factory;
+        }
+        [HttpPost]
+        public async Task<string> Index(DTO dto)
+        {
+            var result = string.Empty;
+            var module = _factory.GetModuleService(dto.Id);
+
+            if (module != null)
+            {
+                result = await module.Invoke(dto);
+            }
+            return result.ToString();
+        }
+    }
+}

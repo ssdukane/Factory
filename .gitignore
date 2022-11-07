@@ -19,3 +19,11 @@
 /Factory.OMB/obj/Debug
 /Factory.Domain/bin/Debug/netcoreapp3.1
 /Factory.DataAccessLayer/bin/Debug/netcoreapp3.1
+/UDMSAPI/bin
+/UDMSAPI/obj
+/OMB.App/OMB.App/bin
+/OMB.App/OMB.App/obj
+/OMB.App/OMB.App.Android/bin/Debug
+/OMB.App/OMB.App.Android/obj
+/OMB.App/OMB.App.iOS/bin/iPhoneSimulator/Debug
+/OMB.App/OMB.App.iOS/obj

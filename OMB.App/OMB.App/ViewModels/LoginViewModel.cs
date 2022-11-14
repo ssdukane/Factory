@@ -17,6 +17,7 @@ namespace OMB.App.ViewModels
 
         private async void OnLoginClicked(object obj)
         {
+            Data.AddOwner();
             // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
             await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
         }

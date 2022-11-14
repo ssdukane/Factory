@@ -27,3 +27,5 @@
 /OMB.App/OMB.App.Android/obj
 /OMB.App/OMB.App.iOS/bin/iPhoneSimulator/Debug
 /OMB.App/OMB.App.iOS/obj
+/Factory.DataAccessLayer/bin/Release/netcoreapp3.1
+/Factory.API/.config

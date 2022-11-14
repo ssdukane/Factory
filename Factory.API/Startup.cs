@@ -3,12 +3,15 @@ using Dashboard;
 using Factory.Interface;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Omi.Application.Configuration;
 using Omi.Infra;
+using System.IO.Compression;
+using System.Linq;
 using Users.API;
 
 namespace Factory.API
@@ -28,6 +31,34 @@ namespace Factory.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());
+            });
+
+            //To use to generate Documnetaion need below lines Upadted by Balaji
+            services.AddSwaggerGen(c =>
+            {
+                c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
+                c.IgnoreObsoleteActions();
+                c.IgnoreObsoleteProperties();
+                c.CustomSchemaIds(type => type.FullName);
+            });
+
+            services.AddResponseCompression(options =>
+            {
+                options.EnableForHttps = true;
+                options.Providers.Add<GzipCompressionProvider>();
+            });
+
+            services.Configure<GzipCompressionProviderOptions>(options =>
+            {
+                options.Level = CompressionLevel.Fastest;
+            });
+
             services.AddControllers();
 
             services.AddScoped<Factory>();
@@ -40,10 +71,10 @@ namespace Factory.API
                 .AddScoped<IInvoke, DashboardManager>(s => s.GetService<DashboardManager>());
 
             services.AddInfraServices(_configuration);
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Factory API", Version = "v1" });
-            });
+            //services.AddSwaggerGen(c =>
+           // {
+             //   c.SwaggerDoc("v1", new OpenApiInfo { Title = "Factory API", Version = "v1" });
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

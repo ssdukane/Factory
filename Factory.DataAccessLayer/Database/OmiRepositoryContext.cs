@@ -11,6 +11,7 @@ namespace Omi.Infra.Database
         { }
 
         public virtual DbSet<Owner> Owners { get; set; } = null!;
+        public virtual DbSet<Owner> Customer { get; set; } = null!;
        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -8,5 +8,6 @@ namespace Omi.Application.Interfaces
     {
         IEnumerable<Owner> GetOwners();
         public Task AddOwner();
+        public Task AddCustomer();
     }
 }

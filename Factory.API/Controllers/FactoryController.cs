@@ -6,7 +6,7 @@ namespace Factory.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class FactoryController : Controller
+    public class FactoryController : ControllerBase
     {
         private readonly Factory _factory;
 

@@ -22,10 +22,11 @@ namespace Admin
             {
                 case 101:
                     await _ownerRepository.AddOwner();
-                    
+                    result = "1";
                     break;
-                case 57:
-                    result = "Super Admin";
+                case 102:
+                    await _ownerRepository.AddCustomer();
+                    result = "1";
                     break;
             }
             return result;
